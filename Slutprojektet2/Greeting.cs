@@ -19,15 +19,9 @@ namespace Slutprojektet2
             }
         }
 
-        public Greeting()
-        {
-
-        }
-
         public void PrintName()
         {
             System.Console.WriteLine(randomString + "!");
-
         }
     }
 }

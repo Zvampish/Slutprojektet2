@@ -7,9 +7,9 @@ namespace Slutprojektet2
     {
         private int indexInt = 0;
 
-        List<string> words = new List<string>();
-        Queue<string> wordQueue = new Queue<string>();
-        Dictionary<int, string> wordDict = new Dictionary<int, string>();
+        private List<string> words = new List<string>();
+        private Queue<string> wordQueue = new Queue<string>();
+        private Dictionary<int, string> wordDict = new Dictionary<int, string>();
 
         public void Logic()
         {

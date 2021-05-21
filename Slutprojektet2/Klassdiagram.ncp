@@ -1,0 +1,103 @@
+<Project>
+  <Name>Untitled</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Untitled</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Car</Name>
+        <Access>Public</Access>
+        <Location left="1292" top="88" />
+        <Size width="219" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private string brand</Member>
+        <Member type="Field">private int fuelAmmount</Member>
+        <Member type="Property">protected string Brand { get; set; }</Member>
+        <Member type="Property">protected int FuelConsumtion { get; set; }</Member>
+        <Member type="Property">protected int FuelAmmount { get; set; }</Member>
+        <Member type="Method">public int ConsumeFuel()</Member>
+        <Member type="Method">public void PrintFuel()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Greeting</Name>
+        <Access>Public</Access>
+        <Location left="977" top="708" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private string text</Member>
+        <Member type="Property">public string Text { get; set; }</Member>
+        <Member type="Method">public void PrintName()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Char</Name>
+        <Access>Public</Access>
+        <Location left="977" top="88" />
+        <Size width="205" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public string RandomString(int length)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Word</Name>
+        <Access>Public</Access>
+        <Location left="977" top="400" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected string randomString</Member>
+        <Member type="Constructor">public Word()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ImportantMethod</Name>
+        <Access>Public</Access>
+        <Location left="628" top="88" />
+        <Size width="237" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int indexInt</Member>
+        <Member type="Field">private List&lt;string&gt; words</Member>
+        <Member type="Field">private Queue&lt;string&gt; wordQueue</Member>
+        <Member type="Field">private Dictionary&lt;int, string&gt; wordDict</Member>
+        <Member type="Method">public void Logic()</Member>
+        <Member type="Method">public void HelloMethod(Greeting hello)</Member>
+        <Member type="Method">public void CarMethod()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>TrackCar</Name>
+        <Access>Public</Access>
+        <Location left="1292" top="400" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public TrackCar()</Member>
+        <Member type="Method">public void Drive()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Program</Name>
+        <Access>Public</Access>
+        <Location left="640" top="364" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public static Random generator</Member>
+        <Member type="Method">static void Main(string[] args)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Generalization" first="3" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="1" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="5" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
