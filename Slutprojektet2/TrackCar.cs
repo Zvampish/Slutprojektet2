@@ -35,23 +35,32 @@ namespace Slutprojektet2
             ConsumeFuel();
         }
 
+        // Metod som hanterar ifrågasättning av om användaren vill tanka sin bil
         public void AskForRefuel()
         {
+            // Frågar användaren om den vill tanka bilen
             System.Console.WriteLine("Do you want to refuel the " + Brand + "?");
             System.Console.WriteLine("1: Yes   |   2: No");
             System.Console.WriteLine("\nEnter the corresponding number to make your selection");
 
             if (ImportantMethod.CheckPlayerInput2() == 1)
             {
+                // Dubbelchecka om användaren är säker på att den vill tanka
                 Console.Clear();
                 System.Console.WriteLine("Are you sure you want to refuel?");
                 System.Console.WriteLine("1: Yes   |   2: No");
                 System.Console.WriteLine("\nEnter the corresponding number to make your selection");
-                
+
+                // Om använder väljer att tanka efter ha blivit frågad två gånger så kommer tanknings-metoden att köras
                 if (ImportantMethod.CheckPlayerInput2() == 1)
                 {
                     Console.Clear();
                     Refuel();
+                }
+
+                else
+                {
+                    Console.Clear();
                 }
             }
 

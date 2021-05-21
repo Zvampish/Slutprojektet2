@@ -95,14 +95,21 @@ namespace Slutprojektet2
         {
             System.Console.WriteLine("test");
         }
-
+        
+        // Metod som hanterar tankning av bilen
+        // UTÖKNING: Slumpning av mängd bränsle som tankas och om man vill tanka igen...
         public void Refuel()
         {
+            //Tankar bilen
             FuelAmount += FuelConsumtion;
 
+            // Informerar användaren om de som tankade bilen tankade för mycket
             if (FuelAmount > FuelAmountFull)
             {
                 System.Console.WriteLine("The refuelsers did not do a good job, the fueltank is overflown");
+                
+                // Kan göras i propertyn, men det behövs göras i if-statementet för att kunna säga om tanken blev överfull eller ej
+                // Detta kan även göras i propertyn, men det passar bra med en metod istället för att ha all kod i propertyn (mer uppdelad kod)
                 FuelAmount = FuelAmountFull;
             }
 
@@ -111,6 +118,7 @@ namespace Slutprojektet2
                 System.Console.WriteLine("The refuelsers did a good job, the fueltank is not overflown");
             }
 
+            // Informerar användaren om man kan tanka bilen ytterliggare eller om den är full.
             if (FuelAmount >= FuelAmountFull)
             {
                 System.Console.WriteLine("The tank is full, no more gas can be fueled");
@@ -118,9 +126,10 @@ namespace Slutprojektet2
 
             else
             {
-                System.Console.WriteLine("There is still some room in the tank for fuel");
+                System.Console.WriteLine("There is still some room in the tank for more fuel");
             }
 
+            // Skriver ut den nya mängden bränsle som finns i tanken
             System.Console.WriteLine("The car has been refuled and has now " + FuelAmount + " gallons of fuel left\n\n");
         }
     }
