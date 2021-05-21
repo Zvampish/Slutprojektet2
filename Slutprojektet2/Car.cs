@@ -98,7 +98,9 @@ namespace Slutprojektet2
 
         public void Refuel()
         {
-            if ((FuelAmount += FuelConsumtion) > FuelAmountFull)
+            FuelAmount += FuelConsumtion;
+
+            if (FuelAmount > FuelAmountFull)
             {
                 System.Console.WriteLine("The refuelsers did not do a good job, the fueltank is overflown");
                 FuelAmount = FuelAmountFull;
@@ -107,10 +109,9 @@ namespace Slutprojektet2
             else
             {
                 System.Console.WriteLine("The refuelsers did a good job, the fueltank is not overflown");
-                FuelAmount += FuelConsumtion;
             }
 
-            if (FuelAmount == FuelAmountFull)
+            if (FuelAmount >= FuelAmountFull)
             {
                 System.Console.WriteLine("The tank is full, no more gas can be fueled");
             }
@@ -120,7 +121,7 @@ namespace Slutprojektet2
                 System.Console.WriteLine("There is still some room in the tank for fuel");
             }
 
-            System.Console.WriteLine("The car has been refuled and has now " + FuelAmount + " gallons of fuel left");
+            System.Console.WriteLine("The car has been refuled and has now " + FuelAmount + " gallons of fuel left\n\n");
         }
     }
 }

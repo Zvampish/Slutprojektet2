@@ -61,7 +61,7 @@ namespace Slutprojektet2
             Console.ReadLine();
             Console.Clear();
 
-            System.Console.WriteLine("If the Polmorphism is working it will say 'test2' below this message.");
+            System.Console.WriteLine("If the Polmorphism is working it will say 'test2' below this message.\n");
 
             System.Console.WriteLine("test2");
             // base.CarMethod();
