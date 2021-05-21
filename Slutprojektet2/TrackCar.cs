@@ -5,7 +5,7 @@ namespace Slutprojektet2
 {
     public class TrackCar : Car
     {
-        public static List<string> carBrands = new List<string>() {"Ferrari", "McLaren", "Mercedez Benz", "Tesla"};
+        public static List<string> carBrands = new List<string>() { "Ferrari", "McLaren", "Mercedez Benz", "Tesla" };
         public static Dictionary<int, string> carBrandsDict = new Dictionary<int, string>();
         // Konstruktor som sätter värden för bilen,
         // dessa värden är gemensamma då de befinner sig i Car-klassen
@@ -19,7 +19,7 @@ namespace Slutprojektet2
             // men eftersom att listor och arrayer indexerar från 0 uppstår problemet att det lätt hänt blir "out of range"
             // vilket syftar på att man försöker komma åt något som inte existerar
             // dessutom så anropar man information som ligger på en högre i index
-            Brand = carBrands[input-1];
+            Brand = carBrands[input - 1];
 
             FuelAmount = 250;
             FuelAmountFull = FuelAmount;
@@ -41,19 +41,28 @@ namespace Slutprojektet2
             System.Console.WriteLine("1: Yes   |   2: No");
             System.Console.WriteLine("\nEnter the corresponding number to make your selection");
 
-            int temp = ImportantMethod.CheckPlayerInput2();
-
-            Console.Clear();
-            if (temp == 1)
+            if (ImportantMethod.CheckPlayerInput2() == 1)
             {
-                Refuel();
+                Console.Clear();
+                System.Console.WriteLine("Are you sure you want to refuel?");
+                System.Console.WriteLine("1: Yes   |   2: No");
+                System.Console.WriteLine("\nEnter the corresponding number to make your selection");
+                
+                if (ImportantMethod.CheckPlayerInput2() == 1)
+                {
+                    Console.Clear();
+                    Refuel();
+                }
             }
 
             else
             {
+                Console.Clear();
                 System.Console.WriteLine("The car did not refuel");
             }
+
         }
+
         // Testar om polymorfismen funkar
         public override void CarMethod()
         {

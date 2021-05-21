@@ -18,6 +18,7 @@ namespace Slutprojektet2
             importantMethod.CarMethod();
 
             System.Console.WriteLine("\nThe program has come to an end. Goodbye!");
+            System.Console.WriteLine("Press ENTER to exit the program");
             Console.ReadLine();
         }
     }
