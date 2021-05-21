@@ -8,9 +8,10 @@ namespace Slutprojektet2
         // Dessa värden är place-holder värden som ska defineras om hos den ärvande klassen
         private string brand = "";
         private int fuelConsumtion = 100;
-        private int fuelAmmount = 0;
+        private int fuelAmount = 0;
+        private int fuelAmountFull = 0;
 
-        // Tillhörande property till de privata variablerna
+        // Tillhörande properties till de privata variablerna
         protected string Brand
         {
             get
@@ -37,20 +38,38 @@ namespace Slutprojektet2
             }
         }
 
-        protected int FuelAmmount
+        protected int FuelAmount
         {
             get
             {
-                return fuelAmmount;
+                return fuelAmount;
             }
 
             set
             {
-                fuelAmmount = value;
+                fuelAmount = value;
 
-                if (fuelAmmount < 0)
+                if (fuelAmount < 0)
                 {
-                    fuelAmmount = 0;
+                    fuelAmount = 0;
+                }
+            }
+        }
+
+        protected int FuelAmountFull
+        {
+            get
+            {
+                return fuelAmountFull;
+            }
+
+            set
+            {
+                fuelAmountFull = value;
+
+                if (fuelAmountFull < 0)
+                {
+                    fuelAmountFull = 0;
                 }
             }
         }
@@ -58,7 +77,7 @@ namespace Slutprojektet2
         // Förbrukar bränsle genom att förbruka samma mängd som den ärvande Car-klassen har i bränsleförbrukning
         public int ConsumeFuel()
         {
-            FuelAmmount -= FuelConsumtion;
+            FuelAmount -= FuelConsumtion;
 
             return FuelConsumtion;
         }
@@ -67,7 +86,7 @@ namespace Slutprojektet2
         // Så att användaren vet hur mycket som finns kvar
         public void PrintFuel()
         {
-            System.Console.WriteLine(FuelAmmount);
+            System.Console.WriteLine(FuelAmount + " gallons\n");
         }
 
         // En metod som är gjord för att bli överskriven av den ärvande klassen
@@ -75,6 +94,33 @@ namespace Slutprojektet2
         public virtual void CarMethod()
         {
             System.Console.WriteLine("test");
+        }
+
+        public void Refuel()
+        {
+            if ((FuelAmount += FuelConsumtion) > FuelAmountFull)
+            {
+                System.Console.WriteLine("The refuelsers did not do a good job, the fueltank is overflown");
+                FuelAmount = FuelAmountFull;
+            }
+
+            else
+            {
+                System.Console.WriteLine("The refuelsers did a good job, the fueltank is not overflown");
+                FuelAmount += FuelConsumtion;
+            }
+
+            if (FuelAmount == FuelAmountFull)
+            {
+                System.Console.WriteLine("The tank is full, no more gas can be fueled");
+            }
+
+            else
+            {
+                System.Console.WriteLine("There is still some room in the tank for fuel");
+            }
+
+            System.Console.WriteLine("The car has been refuled and has now " + FuelAmount + " gallons of fuel left");
         }
     }
 }

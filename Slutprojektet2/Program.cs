@@ -10,10 +10,14 @@ namespace Slutprojektet2
         {
             ImportantMethod importantMethod = new ImportantMethod();
 
+            //Skriver ut "Hello" och namnet/id:n
             importantMethod.Logic();
             
+            // All logik kopplad till bilar
+            // Klassen gör mycket, dock struktuerad med flera metoder
             importantMethod.CarMethod();
 
+            System.Console.WriteLine("\nThe program has come to an end. Goodbye!");
             Console.ReadLine();
         }
     }
