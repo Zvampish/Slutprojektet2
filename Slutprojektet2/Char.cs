@@ -11,7 +11,7 @@ namespace Slutprojektet2
         {
             string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             return new string(Enumerable.Repeat(chars, length)
-              .Select(s => s[Program.generator.Next(s.Length)]).ToArray());
+            .Select(s => s[Program.generator.Next(s.Length)]).ToArray());
         }
     }
 }

@@ -8,23 +8,26 @@
         <Name>Car</Name>
         <Access>Public</Access>
         <Location left="1292" top="88" />
-        <Size width="219" height="230" />
+        <Size width="219" height="281" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private string brand</Member>
         <Member type="Field">private int fuelConsumption</Member>
         <Member type="Field">private int fuelAmmount</Member>
+        <Member type="Field">private int fuelAmmountFull</Member>
         <Member type="Property">protected string Brand { get; set; }</Member>
         <Member type="Property">protected int FuelConsumtion { get; set; }</Member>
         <Member type="Property">protected int FuelAmmount { get; set; }</Member>
+        <Member type="Property">protected int FuelAmmountFull { get; set; }</Member>
         <Member type="Method">public int ConsumeFuel()</Member>
         <Member type="Method">public void PrintFuel()</Member>
         <Member type="Method">public virtual void CarMethod()</Member>
+        <Member type="Method">public void Refuel()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Greeting</Name>
         <Access>Public</Access>
-        <Location left="977" top="708" />
+        <Location left="977" top="709" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private string text</Member>
@@ -47,7 +50,7 @@
         <Location left="977" top="400" />
         <Size width="205" height="216" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">protected string randomString2</Member>
+        <Member type="Field">private string randomString2</Member>
         <Member type="Property">protected string RandomString2 { get; set; }</Member>
         <Member type="Constructor">public Word()</Member>
         <Modifier>None</Modifier>
@@ -55,8 +58,8 @@
       <Entity type="Class">
         <Name>ImportantMethod</Name>
         <Access>Public</Access>
-        <Location left="628" top="88" />
-        <Size width="237" height="247" />
+        <Location left="627" top="88" />
+        <Size width="237" height="264" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private int indexInt</Member>
         <Member type="Field">private List&lt;string&gt; words</Member>
@@ -65,28 +68,30 @@
         <Member type="Method">public void Logic()</Member>
         <Member type="Method">public void HelloMethod(Greeting hello)</Member>
         <Member type="Method">public void CarMethod()</Member>
-        <Member type="Method">public int StringToInt(string playerInput)</Member>
-        <Member type="Method">public int CheckPlayerInput()</Member>
+        <Member type="Method">public static int StringToInt(string playerInput)</Member>
+        <Member type="Method">private int CheckPlayerInput()</Member>
+        <Member type="Method">public static int CheckPlayerInput2()</Member>
         <Member type="Method">private void PrintCarBrands()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>TrackCar</Name>
         <Access>Public</Access>
-        <Location left="1292" top="400" />
+        <Location left="1292" top="489" />
         <Size width="234" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public static List&lt;string&gt; carBrands</Member>
         <Member type="Field">public static Dictionary&lt;int, string&gt; carBrandsDict</Member>
         <Member type="Constructor">public TrackCar()</Member>
         <Member type="Method">public void Drive()</Member>
+        <Member type="Method">public void AskForRefuel()</Member>
         <Member type="Method">public override void CarMethod()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Program</Name>
         <Access>Public</Access>
-        <Location left="640" top="364" />
+        <Location left="654" top="438" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public static Random generator</Member>
