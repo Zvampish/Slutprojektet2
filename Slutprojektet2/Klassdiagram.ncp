@@ -8,15 +8,17 @@
         <Name>Car</Name>
         <Access>Public</Access>
         <Location left="1292" top="88" />
-        <Size width="219" height="216" />
+        <Size width="219" height="230" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private string brand</Member>
+        <Member type="Field">private int fuelConsumption</Member>
         <Member type="Field">private int fuelAmmount</Member>
         <Member type="Property">protected string Brand { get; set; }</Member>
         <Member type="Property">protected int FuelConsumtion { get; set; }</Member>
         <Member type="Property">protected int FuelAmmount { get; set; }</Member>
         <Member type="Method">public int ConsumeFuel()</Member>
         <Member type="Method">public void PrintFuel()</Member>
+        <Member type="Method">public virtual void CarMethod()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
@@ -43,9 +45,10 @@
         <Name>Word</Name>
         <Access>Public</Access>
         <Location left="977" top="400" />
-        <Size width="162" height="216" />
+        <Size width="205" height="216" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">protected string randomString</Member>
+        <Member type="Field">protected string randomString2</Member>
+        <Member type="Property">protected string RandomString2 { get; set; }</Member>
         <Member type="Constructor">public Word()</Member>
         <Modifier>None</Modifier>
       </Entity>
@@ -72,6 +75,7 @@
         <Collapsed>False</Collapsed>
         <Member type="Constructor">public TrackCar()</Member>
         <Member type="Method">public void Drive()</Member>
+        <Member type="Method">public override void CarMethod()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
