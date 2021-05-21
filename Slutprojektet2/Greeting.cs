@@ -8,11 +8,13 @@ namespace Slutprojektet2
 
         public string Text
         {
-            get{
+            get
+            {
                 return text;
             }
 
-            set{
+            set
+            {
                 text = value;
             }
         }

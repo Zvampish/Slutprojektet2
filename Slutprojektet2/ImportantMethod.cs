@@ -35,5 +35,14 @@ namespace Slutprojektet2
                 System.Console.Write(wordDict[key]);
             }
         }
+
+        public void CarMethod()
+        {
+            Car trackCar = new TrackCar();
+
+            ((TrackCar)trackCar).Drive();
+
+            trackCar.PrintFuel();
+        }
     }
 }
