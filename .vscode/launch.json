@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Slutprojektet2/bin/Debug/netcoreapp3.1/Slutprojektet2.dll",
+            "program": "${workspaceFolder}/Slutprojektet2/bin/Debug/net5.0/Slutprojektet2.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Slutprojektet2",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console

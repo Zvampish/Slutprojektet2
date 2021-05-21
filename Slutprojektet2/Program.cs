@@ -10,6 +10,8 @@ namespace Slutprojektet2
         {
             ImportantMethod importantMethod = new ImportantMethod();
 
+            importantMethod.Logic();
+            
             importantMethod.CarMethod();
 
             Console.ReadLine();

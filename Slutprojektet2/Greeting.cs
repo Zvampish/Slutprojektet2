@@ -4,8 +4,11 @@ namespace Slutprojektet2
 {
     public class Greeting : Word
     {
-        private string text;
+        // Variabel för klassen, används i propertyn
+        private string text = "";
 
+        // En property som sätter och hämtar värdet på text
+        // Används i ImportantMethod-klassen
         public string Text
         {
             get
@@ -21,7 +24,7 @@ namespace Slutprojektet2
 
         public void PrintName()
         {
-            System.Console.WriteLine(randomString + "!");
+            System.Console.WriteLine(RandomString2 + "!");
         }
     }
 }
