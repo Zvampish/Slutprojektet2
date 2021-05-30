@@ -51,6 +51,8 @@ namespace Slutprojektet2
         // Använder sig av polymorfism i slaget av virtual och override samt forced
         public void CarMethod()
         {
+            LapsMaker lapsMaker = new LapsMaker();
+
             PrintCarBrands();
 
             System.Console.WriteLine("\nEnter the corresponding index to the desired brand: \n(entering the name of the brand will not work)");
@@ -62,7 +64,7 @@ namespace Slutprojektet2
 
             Car trackCar = new TrackCar(toImport);
 
-            
+
             ((TrackCar)trackCar).Drive();
 
             trackCar.PrintFuel();
@@ -70,7 +72,7 @@ namespace Slutprojektet2
 
             ((TrackCar)trackCar).AskForRefuel();
 
-            
+
             trackCar.CarMethod();
         }
 

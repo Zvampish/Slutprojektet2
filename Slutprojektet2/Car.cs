@@ -11,6 +11,8 @@ namespace Slutprojektet2
         private int fuelAmount = 0;
         private int fuelAmountFull = 0;
 
+        public static int numberOfLaps;
+
         // Tillhörande properties till de privata variablerna
         protected string Brand
         {
@@ -95,7 +97,7 @@ namespace Slutprojektet2
         {
             System.Console.WriteLine("test");
         }
-        
+
         // Metod som hanterar tankning av bilen
         // UTÖKNING: Slumpning av mängd bränsle som tankas och om man vill tanka igen...
         public void Refuel()
@@ -107,7 +109,7 @@ namespace Slutprojektet2
             if (FuelAmount > FuelAmountFull)
             {
                 System.Console.WriteLine("The refuelsers did not do a good job, the fueltank is overflown");
-                
+
                 // Kan göras i propertyn, men det behövs göras i if-statementet för att kunna säga om tanken blev överfull eller ej
                 // Detta kan även göras i propertyn, men det passar bra med en metod istället för att ha all kod i propertyn (mer uppdelad kod)
                 FuelAmount = FuelAmountFull;
@@ -131,6 +133,11 @@ namespace Slutprojektet2
 
             // Skriver ut den nya mängden bränsle som finns i tanken
             System.Console.WriteLine("The car has been refuled and has now " + FuelAmount + " gallons of fuel left\n\n");
+        }
+
+        public static void PrintLaps()
+        {
+            System.Console.WriteLine(numberOfLaps);
         }
     }
 }

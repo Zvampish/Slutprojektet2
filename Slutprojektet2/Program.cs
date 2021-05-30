@@ -12,7 +12,7 @@ namespace Slutprojektet2
 
             //Skriver ut "Hello" och namnet/id:n
             importantMethod.Logic();
-            
+
             // All logik kopplad till bilar
             // Klassen gör mycket, dock struktuerad med flera metoder
             importantMethod.CarMethod();
